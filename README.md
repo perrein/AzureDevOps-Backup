@@ -1,5 +1,6 @@
-# VSOBackup
-This is our Visual Studio Online backup tool. You can find more info on our [blog](http://blog.orbitone.com/post/Visual-Studio-Online-Backup-Tool)
+# Azure DevOps Backup Tool
+This is a Azure DevOps Backup Tools forked from OrbitOne/VSOBackup.
+It support Personal Access Token (Alternate Credentials is removed by Microsoft).
 
 We use the VSO Rest API  to query our VSO account and get all the data we need. Since in VSO you can only have one Team Project Collection, we retrieve all the team projects of the default collection. Each of these team projects can have multiple repositories that need to be backed up. A folder is created for each team project and saved to a location on disk that can be configured in the app.config. When the team project folder is created, the task loops over each repository in the team project and creates folders for each repository.
 
