@@ -21,15 +21,22 @@ namespace VsoBackup.VisualStudioOnline
         {
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Accept.Add(
+                    new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-                var authenticationHeaderValue = string.Format("{0}:{1}", _configuration.VsoConfiguration.ApiUsername, _configuration.VsoConfiguration.ApiPassword);
-                client.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Basic", Convert.ToBase64String(Encoding.ASCII.GetBytes(authenticationHeaderValue)));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+                    Convert.ToBase64String(
+                        System.Text.ASCIIEncoding.ASCII.GetBytes(
+                            string.Format("{0}:{1}", "", _configuration.VsoConfiguration.ApiPat))));
 
-                var json = await GetAsync(client, url);
-                var retVal = JsonConvert.DeserializeObject<T>(json); 
-                return retVal;
+                using (HttpResponseMessage response = await client.GetAsync(url))
+                {
+                    response.EnsureSuccessStatusCode();
+                    string responseBody = await response.Content.ReadAsStringAsync();
+
+                    var retVal = JsonConvert.DeserializeObject<T>(responseBody);
+                    return retVal;
+                }
             }
         }
 

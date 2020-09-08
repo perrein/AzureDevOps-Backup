@@ -4,21 +4,13 @@ namespace VsoBackup.Configuration
 {
     internal class VsoConfiguration : ConfigurationSection, IVsoConfiguration
     {
-        [ConfigurationProperty("ApiUsername", IsRequired = true)]
-        public string ApiUsername
-        {
-            get
-            {
-                return this["ApiUsername"].ToString();
-            }
-        }
 
-        [ConfigurationProperty("ApiPassword", IsRequired = true)]
-        public string ApiPassword
+        [ConfigurationProperty("ApiPat", IsRequired = true)]
+        public string ApiPat
         {
             get
             {
-                return this["ApiPassword"].ToString();
+                return this["ApiPat"].ToString();
             }
         }
 

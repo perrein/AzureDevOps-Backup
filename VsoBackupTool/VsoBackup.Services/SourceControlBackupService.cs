@@ -87,6 +87,7 @@ namespace VsoBackup.Services
 
             if (_encounteredErrors)
             {
+                _logger.WriteLog(this._errorMessages.ToString());
                 Mailer.SendMail(_errorMessages);
                 throw new Exception("There were errors during repository backup. See the errormail for more info.");
             }

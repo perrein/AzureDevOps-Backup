@@ -2,8 +2,7 @@
 {
     public interface IVsoConfiguration
     {
-        string ApiUsername { get; }
-        string ApiPassword { get; }
+        string ApiPat { get; }
         string AllRepositoriesUrl { get; }
     }
 }

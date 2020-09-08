@@ -22,8 +22,8 @@ namespace VsoBackup.Services
         {
             _credentials = new UsernamePasswordCredentials
             {
-                Username = _allConfiguration.VsoConfiguration.ApiUsername,
-                Password = _allConfiguration.VsoConfiguration.ApiPassword
+                Username = _allConfiguration.VsoConfiguration.ApiPat, // YOUR TOKEN HERE
+                Password = string.Empty
             };
             return _credentials;
         }
