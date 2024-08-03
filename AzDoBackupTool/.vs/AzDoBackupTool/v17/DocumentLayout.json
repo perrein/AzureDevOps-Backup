@@ -1,14 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Desktop\\AzureDevOps-Backup\\VsoBackupTool\\",
+  "WorkspaceRootPath": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}|VsoBackupTool\\AzDoBackupTool.csproj|e:\\desktop\\azuredevops-backup\\vsobackuptool\\vsobackuptool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6773A0C5-C07F-4B8B-9DDA-EA8CE48D85BB}|VsoBackupTool\\AzDoBackupTool.csproj|solutionrelative:vsobackuptool\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28306310-E626-4B6B-BA80-153B2DA78ADF}|AzDoBackup.Configuration\\AzDoBackup.Configuration.csproj|e:\\desktop\\azuredevops-backup\\azdobackuptool\\azdobackup.configuration\\allconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28306310-E626-4B6B-BA80-153B2DA78ADF}|AzDoBackup.Configuration\\AzDoBackup.Configuration.csproj|solutionrelative:azdobackup.configuration\\allconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37E429B6-77FB-4E49-B570-367F4D3A6FFE}|VsoBackup.Services\\AzDoBackup.Services.csproj|e:\\desktop\\azuredevops-backup\\vsobackuptool\\vsobackup.services\\gitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37E429B6-77FB-4E49-B570-367F4D3A6FFE}|VsoBackup.Services\\AzDoBackup.Services.csproj|solutionrelative:vsobackup.services\\gitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28306310-E626-4B6B-BA80-153B2DA78ADF}|AzDoBackup.Configuration\\AzDoBackup.Configuration.csproj|e:\\desktop\\azuredevops-backup\\azdobackuptool\\azdobackup.configuration\\vsoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28306310-E626-4B6B-BA80-153B2DA78ADF}|AzDoBackup.Configuration\\AzDoBackup.Configuration.csproj|solutionrelative:azdobackup.configuration\\vsoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}|AzDoBackup.Utilities\\AzDoBackup.Utilities.csproj|e:\\desktop\\azuredevops-backup\\azdobackuptool\\azdobackup.utilities\\mailer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}|AzDoBackup.Utilities\\AzDoBackup.Utilities.csproj|solutionrelative:azdobackup.utilities\\mailer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28306310-E626-4B6B-BA80-153B2DA78ADF}|AzDoBackup.Configuration\\AzDoBackup.Configuration.csproj|e:\\desktop\\azuredevops-backup\\azdobackuptool\\azdobackup.configuration\\filesystemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28306310-E626-4B6B-BA80-153B2DA78ADF}|AzDoBackup.Configuration\\AzDoBackup.Configuration.csproj|solutionrelative:azdobackup.configuration\\filesystemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BED5D8B-5CED-4224-9853-A20A86A88838}|AzDoBackup.Models\\AzDoBackup.Models.csproj|e:\\desktop\\azuredevops-backup\\azdobackuptool\\azdobackup.models\\rootobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BED5D8B-5CED-4224-9853-A20A86A88838}|AzDoBackup.Models\\AzDoBackup.Models.csproj|solutionrelative:azdobackup.models\\rootobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BED5D8B-5CED-4224-9853-A20A86A88838}|AzDoBackup.Models\\AzDoBackup.Models.csproj|E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\azdobackup.models\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BED5D8B-5CED-4224-9853-A20A86A88838}|AzDoBackup.Models\\AzDoBackup.Models.csproj|solutionrelative:azdobackup.models\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,33 +50,108 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GitService.cs",
-              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\VsoBackupTool\\VsoBackup.Services\\GitService.cs",
-              "RelativeDocumentMoniker": "VsoBackup.Services\\GitService.cs",
-              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\VsoBackupTool\\VsoBackup.Services\\GitService.cs",
-              "RelativeToolTip": "VsoBackup.Services\\GitService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T08:41:34.101Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:15:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:18:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:21:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\VsoBackupTool\\VsoBackupTool\\Program.cs",
-              "RelativeDocumentMoniker": "VsoBackupTool\\Program.cs",
-              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\VsoBackupTool\\VsoBackupTool\\Program.cs",
-              "RelativeToolTip": "VsoBackupTool\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "Title": "AllConfiguration.cs",
+              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Configuration\\AllConfiguration.cs",
+              "RelativeDocumentMoniker": "AzDoBackup.Configuration\\AllConfiguration.cs",
+              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Configuration\\AllConfiguration.cs",
+              "RelativeToolTip": "AzDoBackup.Configuration\\AllConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T08:40:23.04Z",
+              "WhenOpened": "2024-08-03T18:42:33.266Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VsoConfiguration.cs",
+              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Configuration\\VsoConfiguration.cs",
+              "RelativeDocumentMoniker": "AzDoBackup.Configuration\\VsoConfiguration.cs",
+              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Configuration\\VsoConfiguration.cs",
+              "RelativeToolTip": "AzDoBackup.Configuration\\VsoConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T18:42:25.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mailer.cs",
+              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Utilities\\Mailer.cs",
+              "RelativeDocumentMoniker": "AzDoBackup.Utilities\\Mailer.cs",
+              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Utilities\\Mailer.cs",
+              "RelativeToolTip": "AzDoBackup.Utilities\\Mailer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T18:42:19.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FileSystemConfiguration.cs",
+              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Configuration\\FileSystemConfiguration.cs",
+              "RelativeDocumentMoniker": "AzDoBackup.Configuration\\FileSystemConfiguration.cs",
+              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Configuration\\FileSystemConfiguration.cs",
+              "RelativeToolTip": "AzDoBackup.Configuration\\FileSystemConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T18:42:11.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RootObject.cs",
+              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Models\\RootObject.cs",
+              "RelativeDocumentMoniker": "AzDoBackup.Models\\RootObject.cs",
+              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Models\\RootObject.cs",
+              "RelativeToolTip": "AzDoBackup.Models\\RootObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T18:40:38.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Models\\Constants.cs",
+              "RelativeDocumentMoniker": "AzDoBackup.Models\\Constants.cs",
+              "ToolTip": "E:\\Desktop\\AzureDevOps-Backup\\AzDoBackupTool\\AzDoBackup.Models\\Constants.cs",
+              "RelativeToolTip": "AzDoBackup.Models\\Constants.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T18:40:36.431Z"
             }
           ]
         }

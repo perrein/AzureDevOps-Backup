@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\LibGit2Sharp.NativeBinaries.2.0.322\build\net46\LibGit2Sharp.NativeBinaries.props" Condition="Exists('..\packages\LibGit2Sharp.NativeBinaries.2.0.322\build\net46\LibGit2Sharp.NativeBinaries.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37E429B6-77FB-4E49-B570-367F4D3A6FFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AzDoBackup.Services</RootNamespace>
+    <AssemblyName>AzDoBackup.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LibGit2Sharp, Version=0.30.0.0, Culture=neutral, PublicKeyToken=7cbde695407f0333, processorArchitecture=MSIL">
+      <HintPath>..\packages\LibGit2Sharp.0.30.0\lib\net472\LibGit2Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileSystemService.cs" />
+    <Compile Include="GitService.cs" />
+    <Compile Include="IFileSystemService.cs" />
+    <Compile Include="IGitService.cs" />
+    <Compile Include="ISourceControlBackupService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceControlBackupService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AzDoBackup.Configuration\AzDoBackup.Configuration.csproj">
+      <Project>{28306310-E626-4B6B-BA80-153B2DA78ADF}</Project>
+      <Name>AzDoBackup.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AzDoBackup.Logging\AzDoBackup.Logging.csproj">
+      <Project>{B38EA798-ACA7-4AE8-B6D2-54B678BFE6A1}</Project>
+      <Name>AzDoBackup.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AzDoBackup.Models\AzDoBackup.Models.csproj">
+      <Project>{5BED5D8B-5CED-4224-9853-A20A86A88838}</Project>
+      <Name>AzDoBackup.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AzDoBackup.Utilities\AzDoBackup.Utilities.csproj">
+      <Project>{8DB10174-7AD7-41A7-B6E3-BC7BB3FF8802}</Project>
+      <Name>AzDoBackup.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AzDoBackup.VisualStudioOnline\AzDoBackup.VisualStudioOnline.csproj">
+      <Project>{E9392286-D88A-4C77-AB43-44E9F72A62AC}</Project>
+      <Name>AzDoBackup.VisualStudioOnline</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\LibGit2Sharp.NativeBinaries.2.0.322\build\net46\LibGit2Sharp.NativeBinaries.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.NativeBinaries.2.0.322\build\net46\LibGit2Sharp.NativeBinaries.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
