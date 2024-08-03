@@ -1,29 +1,29 @@
 # Azure DevOps Backup Tool
-This is a Azure DevOps Backup Tools forked from OrbitOne/VSOBackup.
-It support Personal Access Token (Alternate Credentials are removed by Microsoft).
 
-We use the VSO Rest API  to query our VSO account and get all the data we need. Since in VSO you can only have one Team Project Collection, we retrieve all the team projects of the default collection. Each of these team projects can have multiple repositories that need to be backed up. A folder is created for each team project and saved to a location on disk that can be configured in the app.config. When the team project folder is created, the task loops over each repository in the team project and creates folders for each repository.
+This tool is a fork of the Azure DevOps Backup Tool from OrbitOne/VSOBackup. It supports Personal Access Tokens, as Alternate Credentials have been removed by Microsoft.
 
-![alt tag](https://pbs.twimg.com/media/CEeHrndVIAAnREj.png)
+## Overview
 
+The tool utilizes the Azure DevOps REST API to query an Azure DevOps account and gather all necessary data. Since Azure DevOps allows only one Team Project Collection per organization, the tool retrieves all team projects from the default collection. Each team project can have multiple repositories that require backup. A folder is created for each team project and saved to a configurable location on disk. The tool then iterates over each repository in the team project, creating folders for each repository.
 
-The actual backing up of the repositories is done by using a clone url that we can get from the VSO REST Api.This URL looks just like the one you'd see on github, for example: https://*.visualstudio.com/DefaultCollection/OrbitOne/_git/CrmDataAccess.
-To clone the repositories we use the libGit2Sharp library. Including this in your project is easy, you can use NuGet to download and install it.This library makes cloning of repositories very easy. All you have to do is call Repository.Clone() and pass in the clone URL and the destination.
+![Azure DevOps Backup](https://pbs.twimg.com/media/CEeHrndVIAAnREj.png)
 
-Important to note is that you need to have Alternative Credentials enabled in your VSO account. You need this to access the VSO Rest API and to clone repositories using the libGit2Sharp library. You can set these credentials by going to your profile in your VSO account.
+## Features
 
-On top of that, we also added a configurable key called "RemoveBackupAfterHowManyDays". With this key, we can decide for how long we want to retain the oldest backup. Right now we have this set 10 days, meaning that we will store a complete repository backup for only 10 days. After that, the backup will be deleted from disk.
+### Repository Backup
 
-As mentioned before, we also made the path/location where to save these backups configurable. The REST Urls needed to query our VSO accounts are also configurable. For example, this is one of the URLs we use to get all our repositories.
+The backup process uses a clone URL obtained from the Azure DevOps REST API, similar to those used on GitHub. To clone the repositories, the tool uses the libGit2Sharp library, which simplifies the process to calling `Repository.Clone()` with the clone URL and destination path.
 
-https://*.visualstudio.com/DefaultCollection/_apis/git/repositories?api-version=1.0
+### Personal Access Tokens
 
-Having this hardcoded would not be that convenient, since
+Personal Access Tokens are necessary to access the Azure DevOps REST API and clone repositories using the libGit2Sharp library. These tokens can be generated from your Azure DevOps profile.
 
-    The api function's name might change
-    We might change our vso account, or use a different name
+### Configurable Retention
 
-By having this in the app.config, you can basically use this task as a backuptool for different VSO accounts. Just schedule another instance of the task with different settings, and you're good to go.
-By having these app settings, it enables you to quickly change some settings, without having to recompile or redeploy the application.
+A configurable key, "RemoveBackupAfterHowManyDays", allows you to set the retention period for the oldest backups. Currently set to 10 days, this means a complete repository backup is stored for only 10 days before being deleted from disk.
 
- 
+### Configurable Paths and URLs
+
+Both the backup location and the REST URLs required to query Azure DevOps accounts are configurable. This allows flexibility and convenience, ensuring the tool can adapt to changes such as API function name modifications or account updates.
+
+By configuring these settings, the task can serve as a backup tool for different Azure DevOps accounts. Schedule another instance of the task with different settings, and it’s ready to go. These app settings enable quick changes without the need to recompile or redeploy the application.
